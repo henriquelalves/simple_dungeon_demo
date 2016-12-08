@@ -1,9 +1,6 @@
-
 extends Node
 
-# member variables here, example:
-# var a=2
-# var b="textvar"
+var player_keys = 0
 
 var dungeon_wall_materials = [
 load("res://assets/wall1_mat.tres"),

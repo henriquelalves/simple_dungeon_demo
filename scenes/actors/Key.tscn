@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scenes/actors/Key.gd" type="Script" id=1]
+[ext_resource path="res://assets/key_mesh.tres" type="Mesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 0.8, 0.8, 0.8 )
+
+[node name="Key" type="Area"]
+
+_import_path = NodePath(".")
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00512677, 0, 0.00895688 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+script/script = ExtResource( 1 )
+
+[node name="Key_mesh" type="MeshInstance" parent="."]
+
+_import_path = NodePath("Circle.016")
+_import_transform = Transform( 0.0286221, -1.34411e-09, 0.016525, 0.0113816, 0.0239611, -0.0197135, -0.0119805, 0.0227632, 0.0207509, 0.00511156, 0.0452205, -0.0296033 )
+transform/local = Transform( 0.866026, 8.02368e-07, 0.5, 0.344376, 0.724997, -0.596477, -0.362499, 0.688752, 0.627865, 0.00511157, -0.0805815, 0.0589711 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = true
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+
