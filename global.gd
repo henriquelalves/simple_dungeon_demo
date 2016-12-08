@@ -1,6 +1,6 @@
 extends Node
 
-var player_keys = 5
+var player_keys = 0
 
 var dungeon_wall_materials = [
 load("res://assets/wall1_mat.tres"),
