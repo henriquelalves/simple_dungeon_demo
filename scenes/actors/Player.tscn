@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=2 format=1]
 
 [ext_resource path="res://scenes/actors/Player.gd" type="Script" id=1]
-
-[sub_resource type="BoxShape" id=1]
-
-extents = Vector3( 0.6, 0.6, 0.6 )
 
 [node name="Player" type="Spatial"]
 
@@ -24,35 +20,5 @@ visible_layers = 1048575
 environment = null
 h_offset = 0.0
 v_offset = 0.0
-
-[node name="moving_area" type="Area" parent="."]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-input/ray_pickable = false
-input/capture_on_drag = false
-shape_count = 1
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Transform( -1, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0, 0 )
-shapes/0/trigger = false
-space_override = 0
-gravity_point = false
-gravity_distance_scale = 0.0
-gravity_vec = Vector3( 0, -1, 0 )
-gravity = 9.8
-linear_damp = 0.1
-angular_damp = 1.0
-priority = 0.0
-monitoring = true
-monitorable = true
-collision/layers = 1
-collision/mask = 1
-
-[node name="collision_box" type="CollisionShape" parent="moving_area"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( -1, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0, 0 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
 

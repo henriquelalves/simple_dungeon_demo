@@ -3,11 +3,18 @@ extends Spatial
 var target_direction = 0.0 # in degrees
 var test_position = Vector3()
 var target_position = Vector3()
+var moving_area = null
 var wait = false
 
 func _ready():
 	set_fixed_process(true)
 	set_process_input(true)
+	
+	add_to_group("player")
+	
+	var Moving_area = load("res://scenes/actors/Player_moving_area.tscn")
+	moving_area = Moving_area.instance()
+	get_parent().call_deferred("add_child",moving_area)
 	
 	target_position = get_translation()
 	test_position = get_translation()
@@ -19,12 +26,12 @@ func _input(event):
 	if event.is_pressed() and event.scancode == KEY_UP and event.is_echo() == false:
 		var normal = Vector3(sin(-target_direction), 0.0, cos(-target_direction))
 		test_position = target_position + 2*normal
-		get_node("moving_area").set_translation(Vector3(0.0,0.0,-(test_position - get_translation()).length()))
+		moving_area.set_translation(test_position)
 		wait = true
 	elif event.is_pressed() and event.scancode == KEY_DOWN and event.is_echo() == false:
 		var normal = Vector3(sin(-target_direction), 0.0, cos(-target_direction))
 		test_position = target_position - 2*normal
-		get_node("moving_area").set_translation(Vector3(0.0,0.0,(test_position - get_translation()).length()))
+		moving_area.set_translation(test_position)
 		wait = true
 	elif event.is_pressed() and event.scancode == KEY_LEFT and event.is_echo() == false:
 		test_position = target_position
@@ -47,6 +54,9 @@ func _fixed_process(delta):
 	
 	if wait == true: # have to lose a frame to make area overlap work
 		wait = false
-	elif(get_node("moving_area").get_overlapping_areas().size() == 0):
+	elif(moving_area.get_overlapping_areas().size() == 0):
 		target_position = test_position
+	else:
+		test_position = target_position
+		moving_area.set_translation(target_position)
 

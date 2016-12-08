@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2016-12-08T16:51:34Z</created>
+	<modified>2016-12-08T16:51:34Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_geometries>
+	<geometry id="id-mesh-2" name="Plane">
+		<mesh>
+			<source id="id-mesh-2-positions">
+				<float_array id="id-mesh-2-positions-array" count="72"> -6.034835564605601e-08 -1.0 1.0 -3.290660117727384e-07 1.0 1.0 6.034835564605601e-08 1.0 -1.0 3.290660117727384e-07 -1.0 -1.0 0.009999939240515232 -1.0 1.0 0.010000328533351421 -1.0 -1.0 0.010000060312449932 1.0 -1.0 0.009999671019613743 1.0 1.0 -3.290660117727384e-07 1.0 1.0 -6.034835564605601e-08 -1.0 1.0 0.009999939240515232 -1.0 1.0 0.009999671019613743 1.0 1.0 6.034835564605601e-08 1.0 -1.0 -3.290660117727384e-07 1.0 1.0 0.009999671019613743 1.0 1.0 0.010000060312449932 1.0 -1.0 3.290660117727384e-07 -1.0 -1.0 6.034835564605601e-08 1.0 -1.0 0.010000060312449932 1.0 -1.0 0.010000328533351421 -1.0 -1.0 -6.034835564605601e-08 -1.0 1.0 3.290660117727384e-07 -1.0 -1.0 0.010000328533351421 -1.0 -1.0 0.009999939240515232 -1.0 1.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-positions-array" count="24" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-2-normals">
+				<float_array id="id-mesh-2-normals-array" count="72"> -1.0 -1.343588280633412e-07 -1.9470718370939721e-07 -1.0 -1.343588280633412e-07 -1.9470718370939721e-07 -1.0 -1.343588280633412e-07 -1.9470718370939721e-07 -1.0 -1.343588280633412e-07 -1.9470718370939721e-07 1.0 1.341104507446289e-07 1.94646418094635e-07 1.0 1.341104507446289e-07 1.94646418094635e-07 1.0 1.341104507446289e-07 1.94646418094635e-07 1.0 1.341104507446289e-07 1.94646418094635e-07 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-normals-array" count="24" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-2-texcoord-0">
+				<float_array id="id-mesh-2-texcoord-0-array" count="48"> 0.00010015877342084423 0.9998998045921326 0.9999000430107117 0.999899685382843 0.9998998045921326 9.997999586630613e-05 9.997999586630613e-05 0.00010009918332798406 0.00010015877342084423 0.9998998045921326 9.997999586630613e-05 0.00010009918332798406 0.9998998045921326 9.997999586630613e-05 0.9999000430107117 0.999899685382843 0.9999000430107117 0.999899685382843 0.00010015877342084423 0.9998998045921326 0.00010015877342084423 0.9998998045921326 0.9999000430107117 0.999899685382843 0.9998998045921326 9.997999586630613e-05 0.9999000430107117 0.999899685382843 0.9999000430107117 0.999899685382843 0.9998998045921326 9.997999586630613e-05 9.997999586630613e-05 0.00010009918332798406 0.9998998045921326 9.997999586630613e-05 0.9998998045921326 9.997999586630613e-05 9.997999586630613e-05 0.00010009918332798406 0.00010015877342084423 0.9998998045921326 9.997999586630613e-05 0.00010009918332798406 9.997999586630613e-05 0.00010009918332798406 0.00010015877342084423 0.9998998045921326</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-texcoord-0-array" count="24" stride="2">
+					<param name="S" type="float"/>
+					<param name="T" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<vertices id="id-mesh-2-vertices">
+				<input semantic="POSITION" source="#id-mesh-2-positions"/>
+			</vertices>
+			<polygons count="6">
+				<input semantic="VERTEX" source="#id-mesh-2-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-2-normals" offset="0"/>
+				<input semantic="TEXCOORD" source="#id-mesh-2-texcoord-0" offset="0" set="0"/>
+				<p> 0 1 2 3 </p>
+				<p> 4 5 6 7 </p>
+				<p> 8 9 10 11 </p>
+				<p> 12 13 14 15 </p>
+				<p> 16 17 18 19 </p>
+				<p> 20 21 22 23 </p>
+			</polygons>
+		</mesh>
+	</geometry>
+</library_geometries>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Plane" name="Plane" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-mesh-2">
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>

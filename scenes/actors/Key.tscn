@@ -5,7 +5,7 @@
 
 [sub_resource type="BoxShape" id=1]
 
-extents = Vector3( 0.8, 0.8, 0.8 )
+extents = Vector3( 0.5, 0.5, 0.5 )
 
 [node name="Key" type="Area"]
 
@@ -36,7 +36,7 @@ script/script = ExtResource( 1 )
 
 _import_path = NodePath("Circle.016")
 _import_transform = Transform( 0.0286221, -1.34411e-09, 0.016525, 0.0113816, 0.0239611, -0.0197135, -0.0119805, 0.0227632, 0.0207509, 0.00511156, 0.0452205, -0.0296033 )
-transform/local = Transform( 0.866026, 8.02368e-07, 0.5, 0.344376, 0.724997, -0.596477, -0.362499, 0.688752, 0.627865, 0.00511157, -0.0805815, 0.0589711 )
+transform/local = Transform( 0.53259, 4.93441e-07, 0.307491, 0.211785, 0.445859, -0.366822, -0.22293, 0.423569, 0.386125, 0.00511157, -0.0805815, 0.0589711 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
