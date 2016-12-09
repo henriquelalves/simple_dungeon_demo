@@ -22,7 +22,8 @@ func _ready():
 	pass
 
 func _input(event):
-	
+	if event.type != InputEvent.KEY:
+		return 
 	if event.is_pressed() and event.scancode == KEY_UP and event.is_echo() == false:
 		var normal = Vector3(sin(-target_direction), 0.0, cos(-target_direction))
 		test_position = target_position + 2*normal
