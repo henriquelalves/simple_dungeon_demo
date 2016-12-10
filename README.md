@@ -4,3 +4,7 @@ A simple First Person Dungeon Demo for Godot Engine.
 
 ## How to modify the dungeon
 The Dungeon-Making process is pretty much modifying the already existing dungeon with the GridMap node - you can replace every Wall, Door and Key in this way. Just remember to change the size of the dungeon on the Root Script!
+
+## To-do:
+* Fog effect, preferably using a shader.
+* An automatic way to create the floor and the ceiling, without setting up the quad above and below the dungeon.
