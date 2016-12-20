@@ -21,4 +21,26 @@ environment = null
 h_offset = 0.0
 v_offset = 0.0
 
+[node name="OmniLight" type="OmniLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.49 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.2
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.0
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 1.0
+shadow/blur_passes = 0.0
+projector = null
+operator = 0
+params/radius = 10.0
+params/attenuation = 0.5
+
 

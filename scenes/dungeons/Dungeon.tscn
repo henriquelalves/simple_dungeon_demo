@@ -1,56 +1,12 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://scenes/dungeons/Dungeon.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tilemaps/Dungeon_meshlibrary.tres" type="MeshLibrary" id=2]
 [ext_resource path="res://scenes/actors/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/floor.png" type="Texture" id=4]
-[ext_resource path="res://assets/celing.png" type="Texture" id=5]
-[ext_resource path="res://scenes/actors/Hud.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/actors/Godot.tscn" type="PackedScene" id=7]
-
-[sub_resource type="Environment" id=1]
-
-ambient_light/enabled = true
-ambient_light/color = Color( 1, 1, 1, 1 )
-ambient_light/energy = 0.5
-fxaa/enabled = false
-background/mode = 1
-background/color = Color( 0, 0, 0, 1 )
-background/energy = 1.0
-background/scale = 1.0
-background/glow = 0.0
-background/canvas_max_layer = 1
-glow/enabled = false
-glow/blur_passes = 1
-glow/blur_scale = 1
-glow/blur_strength = 1
-glow/blur_blend_mode = null
-glow/bloom = 0.0
-glow/bloom_treshold = 0.5
-dof_blur/enabled = false
-dof_blur/blur_passes = 1
-dof_blur/begin = 0.0
-dof_blur/range = 10.0
-hdr/enabled = false
-hdr/tonemapper = 0
-hdr/exposure = 0.4
-hdr/white = 1.0
-hdr/glow_treshold = 0.95
-hdr/glow_scale = 0.2
-hdr/min_luminance = 0.4
-hdr/max_luminance = 8.0
-hdr/exposure_adj_speed = 0.5
-fog/enabled = false
-fog/begin = 10.94
-fog/begin_color = Color( 1, 1, 1, 1 )
-fog/end_color = Color( 0.628906, 0.14003, 0.14003, 1 )
-fog/attenuation = 3.13833
-fog/bg = true
-bcs/enabled = false
-bcs/brightness = 1.0
-bcs/contrast = 1.0
-bcs/saturation = 1.0
-srgb/enabled = false
+[ext_resource path="res://scenes/actors/Hud.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/actors/Godot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/celing.png" type="Texture" id=6]
+[ext_resource path="res://assets/floor.png" type="Texture" id=7]
 
 [node name="Dungeon" type="Spatial"]
 
@@ -74,92 +30,86 @@ cell/scale = 1.0
 data = { "cells":IntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 0, 1, 0, 1, 1, 1, 3, 1, 0, 5, 1, 0, 9, 1, 0, 0, 2, 0, 1, 2, 0, 3, 2, 0, 5, 2, 0, 9, 2, 0, 0, 3, 0, 3, 3, 0, 5, 3, 0, 9, 3, 0, 0, 4, 0, 2, 4, 0, 3, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 1441794, 8, 4, 0, 9, 4, 0, 0, 5, 0, 5, 5, 2, 9, 5, 0, 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 5, 6, 0, 6, 6, 0, 7, 6, 0, 9, 6, 0, 0, 7, 0, 1, 7, 655361, 2, 7, 0, 3, 7, 0, 5, 7, 0, 7, 7, 0, 9, 7, 0, 0, 8, 0, 3, 8, 655362, 9, 8, 0, 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 9, 0, 7, 9, 0, 8, 9, 0, 9, 9, 0 ) }
 __meta__ = { "_editor_clip_":0, "_editor_floor_":Vector3( 0, 0, 0 ) }
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, 4 )
-environment = SubResource( 1 )
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-transform/local = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 9, 1, 3 )
+transform/local = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 9, 1, 3 )
 
-[node name="floor" type="Sprite3D" parent="."]
+[node name="Hud" parent="." instance=ExtResource( 4 )]
 
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-centered = true
-offset = Vector2( 0, 0 )
-flip_h = false
-flip_v = false
-modulate = Color( 1, 1, 1, 1 )
-opacity = 1.0
-pixel_size = 0.04
-axis = 1
-flags/transparent = false
-flags/shaded = false
-flags/alpha_cut = 0
-texture = ExtResource( 4 )
-vframes = 1
-hframes = 1
-frame = 0
-region = true
-region_rect = Rect2( 0, 0, 500, 500 )
-
-[node name="ceiling" type="Sprite3D" parent="."]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 10 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-centered = true
-offset = Vector2( 0, 0 )
-flip_h = false
-flip_v = false
-modulate = Color( 1, 1, 1, 1 )
-opacity = 1.0
-pixel_size = 0.04
-axis = 1
-flags/transparent = false
-flags/shaded = false
-flags/alpha_cut = 0
-texture = ExtResource( 5 )
-vframes = 1
-hframes = 1
-frame = 0
-region = true
-region_rect = Rect2( 0, 0, 500, 500 )
-
-[node name="Hud" parent="." instance=ExtResource( 6 )]
-
-[node name="Godot" parent="." instance=ExtResource( 7 )]
+[node name="Godot" parent="." instance=ExtResource( 5 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 5 )
+
+[node name="Ceiling" type="Sprite3D" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1796, 0, 0.991346 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.0625
+axis = 1
+flags/transparent = false
+flags/shaded = true
+flags/alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 1
+frame = 0
+region = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="Floor" type="Sprite3D" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.30172, 0, 0.991346 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.0625
+axis = 1
+flags/transparent = false
+flags/shaded = true
+flags/alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 1
+frame = 0
+region = true
+region_rect = Rect2( 0, 0, 32, 32 )
 
 

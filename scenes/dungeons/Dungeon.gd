@@ -4,6 +4,12 @@ export var dungeon_h_size = 10
 export var dungeon_v_size = 10
 
 func _ready():
+	# Setup wall and ceiling
+	get_node("Floor").set_translation(Vector3(dungeon_h_size,0,dungeon_v_size))
+	get_node("Floor").set_region_rect(Rect2(0,0,32*dungeon_h_size,32*dungeon_v_size))
+	get_node("Ceiling").set_translation(Vector3(dungeon_h_size,2,dungeon_v_size))
+	get_node("Ceiling").set_region_rect(Rect2(0,0,32*dungeon_h_size,32*dungeon_v_size))
+	
 	# Create the walls of the dungeon
 	var Dungeon_wall = load("res://scenes/actors/Dungeon_wall.tscn")
 	var Key = load("res://scenes/actors/Key.tscn")
